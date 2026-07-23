@@ -1,12 +1,34 @@
 aid: absurd
 name: Absurd
-description: Absurd is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Absurd is an AI video creation platform positioning itself as "the Creative OS for AI
+  video." It uses autonomous AI agents to handle scripting, scene planning, and video
+  generation, letting companies produce brand and performance advertisements at scale in
+  roughly 72 hours instead of weeks. Based in Los Angeles and part of Y Combinator's Fall
+  2025 batch, Absurd works with brands such as Hims, Kalshi, Replit, and Brex, with some of
+  its generated videos reaching over a million organic views. As of this profile the company
+  markets a product surface only (portfolio, careers, and contact pages) and does not publish
+  a public API, developer documentation, or SDKs; this entry was enriched from public web
+  sources and will be upgraded if a developer surface appears.
 url: https://raw.githubusercontent.com/api-evangelist/absurd/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://absurd.com/logo.jpeg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - y-combinator
+x-yc-batch: Fall 2025
+x-location: Los Angeles, CA
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
@@ -14,9 +36,32 @@ created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
+- Artificial Intelligence
+- Generative AI
+- Video
+- Advertising
+- Marketing
+- Media
+- Creative
 apis: []
+common:
+- type: DomainSecurity
+  url: security/absurd-domain-security.yml
+- type: Website
+  url: https://absurd.com/
+- type: Portfolio
+  url: https://absurd.com/portfolio
+- type: Careers
+  url: https://absurd.com/careers
+- type: Contact
+  url: https://absurd.com/contact
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
