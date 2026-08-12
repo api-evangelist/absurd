@@ -1,0 +1,170 @@
+generated: '2026-08-12'
+method: probed
+source: live unauthenticated HTTP probes of every Absurd-controlled host
+note: >-
+  Absurd serves NO /.well-known document on any host it controls. This file records
+  the absence, and deliberately emits NO WellKnown / SecurityTxt pointer in apis.yml.
+  absurd.com is a client-rendered single-page app whose catch-all route answers HTTP
+  200 with the same index.html for EVERY path, including every /.well-known/* path
+  probed below — a soft-200, not a document. Each of those responses was fetched and
+  confirmed to be the SPA shell (Content-Type text/html, body begins "<!DOCTYPE html>",
+  title "Absurd"), so all are recorded status 200 with hit: false. The API and
+  Supabase hosts return real JSON 404s.
+hosts:
+- host: absurd.com
+  kind: marketing-site
+  catch_all: soft-200-spa
+  paths:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    hit: false
+    reason: spa-shell
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    hit: false
+    reason: spa-shell
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    hit: false
+    reason: spa-shell
+    file: null
+  - path: /.well-known/api-catalog
+    status: 200
+    content_type: text/html
+    hit: false
+    reason: spa-shell
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    content_type: text/html
+    hit: false
+    reason: spa-shell
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 200
+    content_type: text/html
+    hit: false
+    reason: spa-shell
+    file: null
+  - path: /.well-known/agent.json
+    status: 200
+    content_type: text/html
+    hit: false
+    reason: spa-shell
+    file: null
+- host: api.absurd.com
+  kind: product-backend
+  catch_all: json-404
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+- host: app.absurd.com
+  kind: customer-application
+  catch_all: html-404
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    content_type: text/html
+    hit: false
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    content_type: text/html
+    hit: false
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    content_type: text/html
+    hit: false
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    content_type: text/html
+    hit: false
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    content_type: text/html
+    hit: false
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    content_type: text/html
+    hit: false
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    content_type: text/html
+    hit: false
+    file: null
+- host: lp.absurd.com
+  kind: supabase-project-behind-landing-page
+  catch_all: json-404
+  paths:
+  - path: /.well-known/security.txt
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    content_type: application/json
+    hit: false
+    file: null
+summary:
+  hosts_probed: 4
+  paths_probed: 25
+  documents_found: 0
+  security_txt: false
+  api_catalog: false
+  openid_configuration: false
+  agent_card: false
+  pointer_emitted: false

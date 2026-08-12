@@ -1,0 +1,25 @@
+generated: '2026-08-12'
+method: searched
+source: https://absurd.com/
+limit_count: 0
+limits: []
+headers: []
+note: >-
+  No rate limits are documented, because Absurd publishes no developer API and no
+  developer documentation of any kind. The one live Absurd-controlled API host,
+  https://api.absurd.com, is the private backend for the customer application
+  (a FastAPI/Starlette service — it answers {"detail":"Not Found"} on unknown paths
+  and /health returns {"status":"healthy"}), and its interactive docs and schema
+  routes are disabled: /docs, /redoc, /openapi.json and /openapi.yaml all return 404.
+  No RateLimit-*, X-RateLimit-* or Retry-After header was observed on any
+  unauthenticated response from that host.
+evidence:
+- url: https://api.absurd.com/health
+  status: 200
+  finding: '{"status":"healthy"} — host is live; no rate-limit headers returned'
+- url: https://api.absurd.com/docs
+  status: 404
+  finding: interactive docs disabled
+- url: https://api.absurd.com/openapi.json
+  status: 404
+  finding: schema route disabled

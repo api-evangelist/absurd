@@ -1,0 +1,24 @@
+generated: '2026-08-12'
+method: searched
+source: https://absurd.com/
+plan_count: 0
+currency: null
+plans: []
+note: >-
+  Absurd publishes no pricing page and no plans. Its sitemap.xml declares exactly four
+  routes — /, /portfolio, /careers, /contact — and there is no /pricing among them
+  (https://absurd.com/pricing returns the single-page-app shell, not a pricing page).
+  Engagement is sales-led: the only commercial call to action on the site is the contact
+  page and the founder address philip@absurd.com. This is a services/managed-production
+  motion (brand and performance video delivered in roughly 72 hours), not a self-serve
+  metered product, so there is nothing to record — an honest zero, not a gap in the probe.
+evidence:
+- url: https://absurd.com/sitemap.xml
+  status: 200
+  finding: four routes declared; no pricing route
+- url: https://absurd.com/pricing
+  status: 200
+  finding: soft-200 SPA shell, no pricing content
+- url: https://absurd.com/contact
+  status: 200
+  finding: contact-sales is the only commercial path

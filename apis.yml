@@ -5,11 +5,16 @@ description: >-
   video." It uses autonomous AI agents to handle scripting, scene planning, and video
   generation, letting companies produce brand and performance advertisements at scale in
   roughly 72 hours instead of weeks. Based in Los Angeles and part of Y Combinator's Fall
-  2025 batch, Absurd works with brands such as Hims, Kalshi, Replit, and Brex, with some of
-  its generated videos reaching over a million organic views. As of this profile the company
-  markets a product surface only (portfolio, careers, and contact pages) and does not publish
-  a public API, developer documentation, or SDKs; this entry was enriched from public web
-  sources and will be upgraded if a developer surface appears.
+  2025 batch, Absurd works with brands such as Hims, Kalshi, Replit, Brex, Whop, and Reforge,
+  with some of its generated videos reaching over a million organic views. The company runs a
+  managed, sales-led production motion rather than a self-serve platform: its published
+  sitemap declares exactly four routes (home, portfolio, careers, contact), and it ships no
+  pricing page, no blog, no developer portal, no documentation, no SDKs, and no GitHub
+  organization. Three Absurd-controlled hosts are live but none is a developer surface —
+  app.absurd.com is the gated customer application, api.absurd.com is its private FastAPI
+  backend with schema and docs routes disabled, and lp.absurd.com is a key-gated Supabase
+  project serving the landing page. This entry was enriched from public web sources and live
+  unauthenticated probes, and will be upgraded if a developer surface appears.
 url: https://raw.githubusercontent.com/api-evangelist/absurd/refs/heads/main/apis.yml
 accessModel:
   pricing: unknown
@@ -33,7 +38,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-08-12'
 tags:
 - Company
 - Artificial Intelligence
@@ -55,13 +60,43 @@ common:
   url: https://absurd.com/careers
 - type: Contact
   url: https://absurd.com/contact
+- type: LinkedIn
+  url: https://www.linkedin.com/company/absurd/
+- type: X
+  url: https://x.com/withabsurd
+- type: LLMsTxt
+  url: llms/absurd-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-12'
+  status: minimal
+  artifacts_added: 5
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Absurd sells managed AI ad production through a four-route marketing site and a
+    contact form, so full STEP 0b contract discovery across all four of its live hosts
+    found no machine-readable contract: api.absurd.com is a real FastAPI backend
+    (/health returns {"status":"healthy"}) but its /openapi.json, /docs and /redoc
+    routes are disabled and return JSON 404s, and absurd.com answers every
+    /.well-known/* path with a soft-200 single-page-app shell rather than a document.
+  evidence:
+  - url: https://api.absurd.com/health
+    status: 200
+  - url: https://api.absurd.com/openapi.json
+    status: 404
+  - url: https://api.absurd.com/docs
+    status: 404
+  - url: https://api.absurd.com/.well-known/agent-card.json
+    status: 404
+  - url: https://lp.absurd.com/rest/v1/
+    status: 401
+  - url: https://absurd.com/sitemap.xml
+    status: 200
+  checked: '2026-08-12'

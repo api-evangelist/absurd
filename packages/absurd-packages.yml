@@ -1,0 +1,45 @@
+generated: '2026-08-12'
+method: searched
+source: registry.npmjs.org search + pypi.org + GitHub org/user search
+package_count: 0
+packages: []
+note: >-
+  No first-party Absurd client library exists on any public registry. Absurd publishes
+  no API, so there is nothing for an SDK to wrap. No GitHub organization is published
+  either — github.com/absurd and github.com/withabsurd both return 404, and the company's
+  own site and Y Combinator profile link only LinkedIn and x.com/withabsurd.
+  Deliberately NO `SDKs` and NO `Packages` pointer is emitted in apis.yml.
+namesake_warning: >-
+  DO NOT claim npm `absurd-sdk` for this company on a later round. It is a TypeScript SDK
+  for a PostgreSQL-based durable task-execution project by earendil-works
+  (github.com/earendil-works/absurd) and is unrelated to Absurd the AI video company.
+  npm `absurd` (krasimir/absurd, a CSS-in-JS library) and `absurd-sql` (jlongster) are
+  likewise unrelated namesakes. Name collision on "absurd" is dense on npm; only a package
+  that names absurd.com in its repository, homepage or author fields is first-party.
+rejected_candidates:
+- name: absurd-sdk
+  registry: npm
+  version: null
+  published: null
+  official: false
+  reason: >-
+    Different owner and product — "TypeScript SDK for Absurd - PostgreSQL-based durable
+    task execution", homepage github.com/earendil-works/absurd. Version deliberately not
+    recorded so this row can never be mistaken for a currency signal about absurd.com.
+- name: absurd
+  registry: npm
+  version: null
+  published: null
+  official: false
+  reason: krasimir/absurd — a JavaScript CSS library; unrelated namesake.
+- name: absurd-sql
+  registry: npm
+  version: null
+  published: null
+  official: false
+  reason: jlongster/absurd-sql — sqlite3 in IndexedDB; unrelated namesake.
+evidence:
+- url: https://api.github.com/orgs/absurd
+  status: 404
+- url: https://api.github.com/orgs/withabsurd
+  status: 404
