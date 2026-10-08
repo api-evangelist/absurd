@@ -61,6 +61,10 @@ tags:
 - Creative
 apis: []
 common:
+- type: Plans
+  url: plans/absurd-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/absurd-rate-limits.yml
 - type: DomainSecurity
   url: security/absurd-domain-security.yml
 - type: Website
