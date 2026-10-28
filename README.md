@@ -64,6 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Absurd is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Absurd is an AI video creation platform positioning itself as "the Creative OS for AI video." It uses autonomous AI agents to handle scripting, scene planning, and video generation, letting companies produce brand and performance advertisements at scale in roughly 72 hours instead of weeks. Based in Los Angeles and part of Y Combinator's Fall 2025 batch, Absurd works with brands such as Hims, Kalshi, Replit, Brex, Whop, and Reforge, with some of its generated videos reaching over a million organic views. The company runs a managed, sales-led production motion rather than a self-serve platform: its published sitemap declares exactly four routes (home, portfolio, careers, contact), and it ships no pricing page, no blog, no developer portal, no documentation, no SDKs, and no GitHub organization. Three Absurd-controlled hosts are live but none is a developer surface — app.absurd.com is the gated customer application, api.absurd.com is its private FastAPI backend with schema and docs routes disabled, and lp.absurd.com is a key-gated Supabase project serving the landing page. This entry was enriched from public web sources and live unauthenticated probes, and will be upgraded if a developer surface appears.
 
-Backed by: y-combinator
+**Areas:** Company · Artificial Intelligence · Generative AI · Video · Advertising · Marketing · Media · Creative
+
+## Absurd on APIs.io
+
+Everything profiled for Absurd is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/absurd/](https://apis.io/providers/absurd/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Absurd Domain Security](https://apis.io/security/absurd/absurd-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Absurd Plans Pricing](https://apis.io/plans/absurd/absurd-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Absurd Rate Limits](https://apis.io/rate-limits/absurd/absurd-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://absurd.com/)
+
+## API Evangelist rating
+
+**Kin Score 3.0** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 0.0 |
+| Access clarity | 0.0 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.5** — AI & Biometrics
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/absurd/](https://apis.io/providers/absurd/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Absurd: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/absurd/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
